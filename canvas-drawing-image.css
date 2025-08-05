@@ -1,0 +1,130 @@
+
+[data-canvas-drawing-image-engaged] {
+    box-sizing: border-box;
+    border: 1px solid #999;
+    background: #fff;
+    cursor: pointer;
+}
+
+[data-canvas-drawing-image-engaged] [data-empty-image] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    background: #efefef;
+    color: #666;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: absolute; left: 0; top: 0; bottom: 0; right: 0;
+    text-align: center;
+}
+
+[data-canvas-drawing-image-engaged] [data-empty-image].occupied {
+    opacity: 0;
+}
+
+[data-canvas-drawing-image-engaged] [data-empty-image].occupied:hover {
+    opacity: 0.8;
+}
+
+[data-flexible-textfield][data-flexible-textfield-engaged] {
+    display: inline;
+    border-bottom: 1px solid #000;
+    line-height: 1.8;
+    border-radius: 4px;
+    outline: none;
+    min-width: 1em;
+    margin: 0 4px;
+    padding: 0 20px;
+    transition: all 0.2s ease;
+    background-color: #fff;
+}
+
+[data-drawing-modal] .drawing-modal {
+    position: fixed;
+    inset: 0;
+    width: 100vw; height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 30000000;
+}
+[data-drawing-modal] .drawing-modal-content-wrapper {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+[data-drawing-modal] .drawing-modal-content-chrome {
+    background: #efefef;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: auto;
+    box-sizing: border-box;
+    position: relative;
+    flex: 1;
+    height: 0;
+}
+
+
+
+
+[data-drawing-content] .drawing-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 100%;
+}
+[data-drawing-content] .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+[data-drawing-content] .canvas-container {
+    touch-action: none;
+}
+
+[data-drawing-content] .toolbar input, .toolbar select, .toolbar button {
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+[data-drawing-content] .toolbar button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+}
+
+[data-drawing-content] .toolbar .close-button {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+[data-drawing-content] .toolbar .save-button {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+[data-drawing-content] input[type=color] {
+    min-width: 40px;
+    min-height: 24px;
+    padding: 2px;
+}
